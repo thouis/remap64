@@ -12,11 +12,11 @@ cdef extern from "khash.h":
         uint64_t *keys
         uint64_t *vals
 
-    inline kh_u64_t* kh_init_u64()
-    inline void kh_destroy_u64(kh_u64_t*)
-    inline void kh_clear_u64(kh_u64_t*)
-    inline khint_t kh_get_u64(kh_u64_t*, uint64_t)
-    inline void kh_resize_u64(kh_u64_t*, khint_t)
-    inline khint_t kh_put_u64(kh_u64_t*, uint64_t, int*)
-    inline void kh_del_u64(kh_u64_t*, khint_t)
-    bint kh_exist(kh_u64_t*, khiter_t)
+    inline kh_u64_t* kh_init_u64() nogil
+    inline void kh_destroy_u64(kh_u64_t*) nogil
+    inline void kh_clear_u64(kh_u64_t*) nogil
+    inline khint_t kh_get_u64(kh_u64_t*, uint64_t) nogil
+    inline void kh_resize_u64(kh_u64_t*, khint_t) nogil
+    inline khint_t kh_put_u64(kh_u64_t*, uint64_t, int*) nogil
+    inline void kh_del_u64(kh_u64_t*, khint_t) nogil
+    bint kh_exist(kh_u64_t*, khiter_t) nogil
